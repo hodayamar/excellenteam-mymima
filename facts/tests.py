@@ -38,6 +38,11 @@ class FactsTestCase(TestCase):
         three_days_grace = Artists.objects.get(name="Three Days Grace")
         one_too_many = Songs.objects.get(name="One Too Many")
         one_too_many_fact = Facts.objects.get(author="Three Days Grace's member")
+
+        self.assertEqual(Artists.objects.count(), 5)
+        self.assertEqual(Songs.objects.count(), 5)
+        self.assertEqual(Facts.objects.count(), 5)
+
         self.assertEqual(three_days_grace.artist_name(), "Three Days Grace")
         self.assertEqual(one_too_many.song_name(), "One Too Many")
         self.assertEqual(one_too_many_fact.get_fact(), "Three Days Grace's new album \"Human\" Available Now!")
