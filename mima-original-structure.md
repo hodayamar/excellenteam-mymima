@@ -11,11 +11,11 @@
 ## Entities and Relationships
 
 ### Artists
-* id (auto_p_k - int)
+* id (INTEGER PRIMARY KEY)
 * name (string)
 
 ### Songs
-* id (auto_p_k)
+* id (INTEGER PRIMARY KEY)
 * name (string)
 * artist (art_id - int)
 
