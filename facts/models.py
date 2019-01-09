@@ -32,3 +32,6 @@ class Facts(models.Model):
 
     def __str__(self):
         return f"[#{self.id}] by {self.author}"
+
+    def get_fact(self):
+        return self.message
