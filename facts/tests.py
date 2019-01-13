@@ -5,6 +5,7 @@ from facts.models import Artists, Facts, Songs
 class FactsTestCase(TestCase):
 
     def setUp(self):
+            
         Artists.objects.create(name="Three Days Grace")
         Artists.objects.create(name="Starset")
         Artists.objects.create(name="Amy Lee")
