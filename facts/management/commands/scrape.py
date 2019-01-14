@@ -44,6 +44,7 @@ def get_artist_pages(artist_page, home_url):
                 for fact in facts:
                     tmp = fact.find("font").text if fact.find("font") else " "
                     txt = ''.join(list(fact.text[:-len(list(tmp))])) if tmp else ''.join(list(fact.text))
+                    print(txt)
                     Facts.objects.create(author=tmp,
                                          message=txt,
                                          song=tmp_s)
