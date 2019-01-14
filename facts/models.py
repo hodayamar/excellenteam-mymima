@@ -18,7 +18,7 @@ class Songs(models.Model):
     artist = models.ForeignKey(Artists, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.name} by {self.artist}"
+        return f"{self.name}"
 
     def song_name(self):
         return self.name
@@ -26,12 +26,12 @@ class Songs(models.Model):
 
 class Facts(models.Model):
 
-    author = models.CharField(max_length=200)
+    author = models.CharField(max_length=200, blank=True)
     message = models.TextField(blank=True, null=True)
     song = models.ForeignKey(Songs, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"[#{self.id}] by {self.author}"
+        return f"[#{self.id}]"
 
     def get_fact(self):
         return self.message
