@@ -1,15 +1,21 @@
 # MyMima!
 
-By YOUR NAME HERE.
-
+By Hodaya marciano.
 
 ## Requirements
 * Python 3.7
-* pipenv
+* django 
+* django-extensions
+* bs4
+* requests
 
 ## Setup Instructions
 * Clone the project
 * `cd` into your peoject.
-* Run:
+* Run: 
 
-        pipenv install
+        # Need to install requirements
+        
+        python manage.py migrate
+        python manage.py makemigrations
+        python manage.py scrape
