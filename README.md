@@ -15,7 +15,4 @@ By Hodaya marciano.
 * Run: 
 
         # Need to install requirements
-        
-        python manage.py migrate
-        python manage.py makemigrations
         python manage.py scrape
